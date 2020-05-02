@@ -6,7 +6,9 @@ namespace NorthwindConsole.Models
     public class Category
     {
         public int CategoryId { get; set; }
-        [Required(ErrorMessage = "YO - Enter the name!")]
+        
+        [Required]
+        [StringLength(15)]
         public string CategoryName { get; set; }
         public string Description { get; set; }
 
