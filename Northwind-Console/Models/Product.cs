@@ -7,11 +7,11 @@ namespace NorthwindConsole.Models
     {
         public int ProductID { get; set; }
         
-        [Required]
-        [StringLength(40)]
+        [Required(ErrorMessage = "Product Name is required")]
+        [StringLength(40, ErrorMessage = "Product Name must be 40 characters or less")]
         public string ProductName { get; set; }
         
-        [StringLength(20)]
+        [StringLength(20, ErrorMessage = "Quantity Per Unit must be 20 characters or less")]
         public string QuantityPerUnit { get; set; }
         
         public decimal? UnitPrice { get; set; }
